@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|c:\\users\\travi\\onedrive\\desktop\\homework\\windows interactive apps\\web_store_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|c:\\users\\travi\\onedrive\\desktop\\homework\\windows interactive apps\\web_store_app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|c:\\users\\travi\\onedrive\\desktop\\homework\\windows interactive apps\\web_store_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|c:\\users\\travi\\onedrive\\desktop\\homework\\windows interactive apps\\web_store_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{D912CFAB-7323-4FED-A38E-1AD56F8FD07B}|web_store_app.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -55,25 +55,24 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-29T22:07:10.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T22:07:10.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
               "ToolTip": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\js\\site.js",
               "RelativeToolTip": "wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-11-29T22:07:03.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:54:49.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T21:54:49.952Z"
             }
           ]
         }

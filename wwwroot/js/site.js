@@ -6,6 +6,8 @@ async function fetchProducts() {
     try {
         const response = await fetch('https://fakestoreapi.com/products');
         const products = await response.json();
+        console.log(products, "this is product data")
+
         const container = document.getElementById('products-container');
 
         products.forEach(product => {
