@@ -3,6 +3,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Allow external APIs
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -13,9 +22,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+ 
 app.UseRouting();
 
 app.UseAuthorization();
