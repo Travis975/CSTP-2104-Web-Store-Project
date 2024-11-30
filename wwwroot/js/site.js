@@ -1,15 +1,33 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Fetch products and render them
-async function fetchProducts() {
+﻿// Fetch products and render them
+async function fetchProducts(query = '') {
     try {
         const response = await fetch('https://fakestoreapi.com/products');
-        const products = await response.json();
+        let products = await response.json();
         console.log(products, "this is product data");
 
         let container = document.getElementById('products-container');
 
+        // If search query exists, filter the products by title or category
+        if (query) {
+            query = query.toLowerCase();
+            products = products.filter(product => {
+                return (
+                    product.title.toLowerCase().includes(query) ||
+                    product.category.toLowerCase().includes(query)
+                );
+            });
+        }
+ 
+        // Clear the container before appending filtered products
+        container.innerHTML = '';
+
+        // Check if no products were found
+        if (products.length === 0) {
+            container.innerHTML = '<p>No products found for your search.</p>';
+            return;
+        }
+
+        // Render each filtered product
         products.forEach(product => {
             const title = product.title.split(" ");
             const productCard = `
@@ -52,15 +70,21 @@ function addToCart(id, title, price, image) {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();  // Update the cart count in the header
 
-    console.log(cart)
+    console.log(cart);
 }
 
-//window.onload = fetchProducts;
+// Handle search form submission
+function handleSearch(event) {
+    event.preventDefault();
+    let query = document.getElementById('search-input').value.trim();
+    // Fetch products with the search query
+    fetchProducts(query); 
+}
 
 // Load products when home page loads
 window.onload = function () {
     if (window.location.pathname === '/') {
-        fetchProducts();
+        // Fetch all products by default
+        fetchProducts();  
     }
 };
-

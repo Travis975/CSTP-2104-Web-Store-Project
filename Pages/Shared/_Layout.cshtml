@@ -19,6 +19,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <div id="search-bar">
+                        <form class="d-flex" onsubmit="handleSearch(event)">
+                            <input class="form-control me-2" id="search-input" type="search" placeholder="Search for products..." aria-label="Search" />
+                            <button class="btn btn-outline-success" type="submit" style="background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Search</button>
+                        </form>
+                    </div>
+
                     @*<ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
