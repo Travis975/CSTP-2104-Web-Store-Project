@@ -1,3 +1,7 @@
+:root {
+    --primary-color: rgb(13, 110, 253);
+}
+
 #products-container {
     display: flex;
     flex-wrap: wrap;

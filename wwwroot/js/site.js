@@ -11,14 +11,20 @@ async function fetchProducts() {
         let container = document.getElementById('products-container');
 
         products.forEach(product => {
+            const title = product.title.split(" ");
             const productCard = `
-                <div style="border: 1px solid #ddd; padding: 15px; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <img src="${product.image}" alt="${product.title}" style="width: 100%; height: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-                    <h3>${product.title}</h3>
-                    <p>Description: ${product.description.substring(0, 100)}...<a href="/product/${product.id}">Read More</a></p>
-                    <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
-                    <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
-                    <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)})">Add to Cart</button>
+                <div style="display: flex; flex-direction: column; border: 1px solid #ddd; padding: 15px; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <div style="height: 200px; display: flex; align-items: center; justify-content: center; box-shadow: none; border: none;">
+                        <img src="${product.image}" alt="${product.title}" style="max-width: 100%; max-height: 100%; border: none; margin: 0;">
+                    </div>
+                    <hr>
+                    <h3>${title.slice(0, 6).join(" ").replace(",", "")} ${title.length > 6 ? "..." : ""}</h3>
+                    <p>Description: ${product.description.substring(0, 100)}... <a href="/product/${product.id}">Read More</a></p>
+                    <div style="border-radius: 0; box-shadow: none; margin-top: auto;">
+                        <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
+                        <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
+                        <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)})" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Add to Cart</button>
+                    </div>
                 </div>
             `;
             container.innerHTML += productCard;
