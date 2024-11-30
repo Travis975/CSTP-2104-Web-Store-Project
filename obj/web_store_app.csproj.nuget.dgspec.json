@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\web_store_app.csproj": {}
+    "C:\\Users\\maxim\\Desktop\\Projects\\School\\CSTP-2104-Web-Store-Project\\web_store_app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\web_store_app.csproj": {
+    "C:\\Users\\maxim\\Desktop\\Projects\\School\\CSTP-2104-Web-Store-Project\\web_store_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\web_store_app.csproj",
+        "projectUniqueName": "C:\\Users\\maxim\\Desktop\\Projects\\School\\CSTP-2104-Web-Store-Project\\web_store_app.csproj",
         "projectName": "web_store_app",
-        "projectPath": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\web_store_app.csproj",
-        "packagesPath": "C:\\Users\\Travi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\obj\\",
+        "projectPath": "C:\\Users\\maxim\\Desktop\\Projects\\School\\CSTP-2104-Web-Store-Project\\web_store_app.csproj",
+        "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxim\\Desktop\\Projects\\School\\CSTP-2104-Web-Store-Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Travi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
