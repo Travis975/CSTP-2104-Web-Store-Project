@@ -24,3 +24,7 @@
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+
+html {
+    overflow-y: scroll;
+}
