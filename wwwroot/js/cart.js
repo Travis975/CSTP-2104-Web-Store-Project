@@ -22,6 +22,7 @@ function clearCart() {
     localStorage.removeItem('cart');
     updateCartCount();
     document.getElementById('cart-container').innerHTML = "<p>Your cart is empty!</p>";
+    document.getElementById('total-value').innerHTML = "";
 }
 
 // Update item quantity in the cart
