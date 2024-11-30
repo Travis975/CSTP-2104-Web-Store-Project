@@ -2,7 +2,11 @@
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = document.getElementById('cart-count');
-    cartCount.innerText = cart.length;
+    let cartAmount = cart.length;
+    if (cartAmount > 9) {
+        cartAmount = "9+";
+    }
+    cartCount.innerText = cartAmount;
 }
 
 // Clear the cart
