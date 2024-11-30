@@ -29,3 +29,6 @@ C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\
 C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\obj\Debug\net8.0\web_store_app.pdb
 C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\obj\Debug\net8.0\web_store_app.genruntimeconfig.cache
 C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\obj\Debug\net8.0\ref\web_store_app.dll
+C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\obj\Debug\net8.0\web_store_app.csproj.AssemblyReference.cache
+C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app\obj\Debug\net8.0\web_stor.A07703FB.Up2Date

@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\js\\product-details.js",
+      "PackagePath": "staticwebassets\\js\\product-details.js"
+    },
+    {
       "Id": "C:\\Users\\Travi\\OneDrive\\Desktop\\Homework\\Windows Interactive Apps\\web_store_app\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

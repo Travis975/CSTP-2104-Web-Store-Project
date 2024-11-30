@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Travi\OneDrive\Desktop\Homework\Windows Interactive Apps\web_store_app
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Travi/OneDrive/Desktop/Homework/Windows Interactive Apps/web_store_app/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Travi/OneDrive/Desktop/Homework/Windows Interactive Apps/web_store_app/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Travi/OneDrive/Desktop/Homework/Windows Interactive Apps/web_store_app/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Travi/OneDrive/Desktop/Homework/Windows Interactive Apps/web_store_app/Pages/ProductDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Travi/OneDrive/Desktop/Homework/Windows Interactive Apps/web_store_app/Pages/Shared/_ValidationScriptsPartial.cshtml]

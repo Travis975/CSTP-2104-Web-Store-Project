@@ -6,23 +6,25 @@ async function fetchProducts() {
     try {
         const response = await fetch('https://fakestoreapi.com/products');
         const products = await response.json();
-        console.log(products, "this is product data")
+        console.log(products, "this is product data");
 
-        const container = document.getElementById('products-container');
+        let container = document.getElementById('products-container');
 
         products.forEach(product => {
             const productCard = `
                 <div style="border: 1px solid #ddd; padding: 15px; width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <img src="${product.image}" alt="${product.title}" style="width: 100%; height: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
                     <h3>${product.title}</h3>
-                    <p>${product.description.substring(0, 100)}...</p>
-                    <p><strong>Price: $${product.price}</strong></p>
+                    <p>Description: ${product.description.substring(0, 100)}...<a href="/product/${product.id}">Read More</a></p>
+                    <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
                     <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
-                    <button onclick="addToCart(${product.id}, '${product.title}', ${product.price})">Add to Cart</button>
+                    <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)})">Add to Cart</button>
                 </div>
             `;
             container.innerHTML += productCard;
         });
+
+        updateCartCount();  // Update cart count when products are loaded
     } catch (error) {
         console.error("Failed to fetch products:", error);
     }
@@ -34,8 +36,11 @@ function addToCart(id, title, price) {
     cart.push({ id, title, price });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${title} added to the cart!`);
+    updateCartCount();  // Update the cart count in the header
 }
 
 // Load products when the page loads
 window.onload = fetchProducts;
+
+
 

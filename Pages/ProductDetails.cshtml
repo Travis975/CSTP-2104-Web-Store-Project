@@ -1,0 +1,21 @@
+﻿@page "/product/{id:int}"
+
+@model ProductDetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>@Model.Product.Title</h1>
+
+<div style="border: 1px solid #ddd; padding: 20px; width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <img src="@Model.Product.Image" alt="Product Image" style="width: 100%; height: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+    <h2>@Model.Product.Title</h2>
+    <p><strong>Price: $@Model.Product.Price</strong></p>
+    <p>Rating: @Model.Product.Rating.Rate ⭐ (@Model.Product.Rating.Count reviews)</p>
+    <p><strong>Description:</strong></p>
+    <p>@Model.Product.Description</p>
+    <button id="add-to-cart-btn" onclick="addToCart(@Model.Product.Id, '@Model.Product.Title', @Model.Product.Price)">Add to Cart</button>
+</div>
+
+<!-- Link the product-details.js file -->
+<script src="js/product-details.js"></script>
