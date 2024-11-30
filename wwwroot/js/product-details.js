@@ -21,7 +21,7 @@
 
         // Add to cart functionality
         document.getElementById('add-to-cart-btn').addEventListener('click', function() {
-            addToCart(product.id, product.title, product.price);
+            addToCart(product.id, product.title, product.price, product.image);
         });
     } catch (error) {
         console.error('Error fetching product details:', error);
@@ -29,9 +29,9 @@
 };
 
 // Add to cart function
-function addToCart(id, title, price) {
+function addToCart(id, title, price, image) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ id, title, price });
+    cart.push({ id, title, price, image });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${title} added to the cart!`);
 }

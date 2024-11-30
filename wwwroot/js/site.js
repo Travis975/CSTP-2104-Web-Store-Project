@@ -23,7 +23,7 @@ async function fetchProducts() {
                     <div style="border-radius: 0; box-shadow: none; margin-top: auto;">
                         <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
                         <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
-                        <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)})" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Add to Cart</button>
+                        <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)}, '${product.image}')" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Add to Cart</button>
                     </div>
                 </div>
             `;
@@ -37,16 +37,20 @@ async function fetchProducts() {
 }
 
 // Add to cart (localStorage implementation for simplicity)
-function addToCart(id, title, price) {
+function addToCart(id, title, price, image) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ id, title, price });
+    cart.push({ id, title, price, image });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${title} added to the cart!`);
     updateCartCount();  // Update the cart count in the header
 }
 
-// Load products when the page loads
-window.onload = fetchProducts;
+//window.onload = fetchProducts;
 
-
+// Load products when home page loads
+window.onload = function () {
+    if (window.location.pathname === '/') {
+        fetchProducts();
+    }
+};
 
