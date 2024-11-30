@@ -56,6 +56,7 @@ function displayCart() {
 
     if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty!</p>";
+        document.getElementById('total-value').innerHTML = "";
     } else {
         cart.forEach(item => {
             const itemDiv = `
