@@ -17,7 +17,7 @@ async function fetchProducts(query = '') {
                 );
             });
         }
- 
+
         // Clear the container before appending filtered products
         container.innerHTML = '';
 
@@ -77,14 +77,25 @@ function addToCart(id, title, price, image) {
 function handleSearch(event) {
     event.preventDefault();
     let query = document.getElementById('search-input').value.trim();
-    // Fetch products with the search query
-    fetchProducts(query); 
+
+    // Redirect to homepage with the search query in the URL
+    if (query) {
+        window.location.href = `/?search=${encodeURIComponent(query)}`;
+    }
 }
 
-// Load products when home page loads
+// Add event listener for the search form in the shared header
+const searchForm = document.getElementById('search-form');
+if (searchForm) {
+    searchForm.addEventListener('submit', handleSearch);
+}
+
+
+// Load products when home page loads, check for search query in the URL
 window.onload = function () {
     if (window.location.pathname === '/') {
-        // Fetch all products by default
-        fetchProducts();  
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');  // Get search query from the URL
+        fetchProducts(searchQuery);  // Fetch products with the search query (if exists)
     }
 };

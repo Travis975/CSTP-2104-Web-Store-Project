@@ -84,6 +84,7 @@ function displayCart() {
         document.getElementById('total-value').innerHTML = `Total: $${total.toFixed(2) }`;
     }
 }
+
 // Ensure the DOM is fully loaded before running displayCart()
 document.addEventListener('DOMContentLoaded', function () {
     displayCart();
