@@ -27,11 +27,3 @@
         console.error('Error fetching product details:', error);
     }
 };
-
-// Add to cart function
-function addToCart(id, title, price, image) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ id, title, price, image });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${title} added to the cart!`);
-}

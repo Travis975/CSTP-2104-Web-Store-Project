@@ -7,15 +7,18 @@
 
 <h1>@Model.Product.Title</h1>
 
-<div style="border: 1px solid #ddd; padding: 20px; width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-    <img src="@Model.Product.Image" alt="Product Image" style="width: 100%; height: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-    <h2>@Model.Product.Title</h2>
-    <p><strong>Price: $@Model.Product.Price</strong></p>
-    <p>Rating: @Model.Product.Rating.Rate ⭐ (@Model.Product.Rating.Count reviews)</p>
-    <p><strong>Description:</strong></p>
-    <p>@Model.Product.Description</p>
-    <button id="add-to-cart-btn" onclick="addToCart(@Model.Product.Id, '@Model.Product.Title', @Model.Product.Price)">Add to Cart</button>
+<div style="display: flex; border: 1px solid #ddd; padding: 20px; width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    <div style="height: 400px; display: flex; align-items: center; justify-content: center;">
+        <img src="@Model.Product.Image" alt="Product Image" style="max-width: 100%; max-height: 100%; border: none; margin: 0; padding: 40px;">
+    </div>
+    <div>
+        <br />
+        <p>@Model.Product.Description</p>
+        <p><strong>Price: $@Model.Product.Price</strong></p>
+        <p>Rating: @Model.Product.Rating.Rate ⭐ (@Model.Product.Rating.Count reviews)</p>
+        <button id="add-to-cart-btn" onclick="addToCart(@Model.Product.Id, '@Model.Product.Title', @Model.Product.Price, '@Model.Product.Image')" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Add to Cart</button>
+    </div>
 </div>
 
-<!-- Link the product-details.js file -->
-<script src="js/product-details.js"></script>
+<script src="/js/product-details.js"></script>
+<script src="/js/cart.js"></script>

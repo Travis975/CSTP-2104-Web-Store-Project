@@ -1,5 +1,6 @@
 :root {
     --primary-color: rgb(13, 110, 253);
+    --error-color: rgb(255, 0, 0);
 }
 
 #products-container {
@@ -27,4 +28,22 @@
 
 html {
     overflow-y: scroll;
+}
+
+button {
+    display: inline-block;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-accept {
+    background-color: var(--primary-color);
+}
+
+.btn-deny {
+    background-color: var(--error-color);
 }
