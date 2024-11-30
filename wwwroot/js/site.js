@@ -39,10 +39,20 @@ async function fetchProducts() {
 // Add to cart (localStorage implementation for simplicity)
 function addToCart(id, title, price, image) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ id, title, price, image });
+    const itemIndex = cart.findIndex(item => item.id === id);
+
+    if (itemIndex !== -1) { // If exists, increase quantity
+        cart[itemIndex].quantity += 1;
+        alert(`${title} quantity increased to ${cart[itemIndex].quantity}!`);
+    } else { // If doesn't exist, add to object
+        cart.push({ id, title, price, image, quantity: 1 });
+        alert(`${title} added to the cart!`);
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${title} added to the cart!`);
     updateCartCount();  // Update the cart count in the header
+
+    console.log(cart)
 }
 
 //window.onload = fetchProducts;
