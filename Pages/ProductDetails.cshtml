@@ -16,7 +16,7 @@
         <p>@Model.Product.Description</p>
         <p><strong>Price: $@Model.Product.Price</strong></p>
         <p>Rating: @Model.Product.Rating.Rate ⭐ (@Model.Product.Rating.Count reviews)</p>
-        <button id="add-to-cart-btn" class="btn-accept" onclick="addToCart(@Model.Product.Id, '@Model.Product.Title', @Model.Product.Price, '@Model.Product.Image')">Add to Cart</button>
+        <button id="add-to-cart-btn" class="btn-accept" onclick="addToCart(@Model.Product.Id, '@Html.Raw(Model.Product.Title.Replace("'", "\\'"))', @Model.Product.Price, '@Model.Product.Image')">Add to Cart</button>
     </div>
 </div>
 

@@ -41,7 +41,7 @@ async function fetchProducts(query = '') {
                     <div style="border-radius: 0; box-shadow: none; margin-top: auto;">
                         <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
                         <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
-                        <button class="btn-accept" onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)}, '${product.image}')">Add to Cart</button>
+                        <button class="btn-accept" onclick="addToCart(${product.id}, '${product.title.replace(/'/g, "\\'")}', ${product.price.toFixed(2)}, '${product.image}')">Add to Cart</button>
                     </div>
                 </div>
             `;
