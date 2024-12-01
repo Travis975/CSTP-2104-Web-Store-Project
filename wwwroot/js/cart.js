@@ -103,6 +103,14 @@ function displayCart() {
         document.getElementById('total-value').innerHTML = `Total: $${total.toFixed(2) }`;
     }
 }
+function goToCheckOut() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert('Your cart is empty. Add items before checking out!');
+        return;
+    }
+    window.location.href = '/Checkout'; // Redirect to the checkout page
+}
 
 // Ensure the DOM is fully loaded before running displayCart()
 document.addEventListener('DOMContentLoaded', function () {
