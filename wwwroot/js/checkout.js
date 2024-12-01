@@ -1,40 +1,67 @@
-﻿// Display cart items and total price
-function displayCartOnCheckout() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalValue = document.getElementById('total');
+﻿window.addEventListener('DOMContentLoaded', function () {
+    updateCartCount(); // Update cart count in navbar
+    displayCartTotal(); // Load cart total on page load
+});
 
-    // Clear previous cart items
-    cartContainer.innerHTML = '';
+// Fetch and display cart data on the checkout page
+function displayCartTotal() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    console.log("Cart items:", cart);
+
+    const totalValue = document.getElementById('total-price');
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>Your cart is empty. Add items before checking out!</p>';
-        totalValue.innerHTML = '';
+        totalValue.innerHTML = '<strong>Your cart is empty.</strong>';
+        totalDiv.innerHTML = '';
         return;
     }
 
     let total = 0;
     cart.forEach(item => {
-        //const cartItem = `
-        //    <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-        //        <span>${item.title} (x${item.quantity})</span>
-        //        <span>$${(item.price * item.quantity).toFixed(2)}</span>
-        //    </div>
-        //`;
-        cartContainer.innerHTML += cartItem;
-        total += item.price * item.quantity;
-        console.log(total,"total from cart")
+        console.log("Item:", item);
+        total += item.price * item.quantity; // Calculate total price
     });
 
-    totalValue.innerHTML = `<strong>Total Price (Before Taxes and Shipping): $${total.toFixed(2)}</strong>`;
+    const shippingFee = 5.99; // Example shipping fee
+    const taxRate = 0.08; // Example tax rate (8%)
+
+    const taxes = total * taxRate;
+    const finalTotal = total + shippingFee + taxes;
+
+    totalValue.innerHTML = `
+        <strong>Subtotal:</strong> $${total.toFixed(2)}<br>
+        <strong>Shipping Fee:</strong> $${shippingFee.toFixed(2)}<br>
+        <strong>Taxes:</strong> $${taxes.toFixed(2)}<br>
+        <h2>Total Price: $${finalTotal.toFixed(2)}</h2>
+    `;
 }
 
-// Clear the cart (optional, used for testing purposes)
+// Clear the cart (optional)
 function clearCart() {
     localStorage.removeItem('cart');
-    displayCartOnCheckout(); // Refresh the cart view
+    const totalValue = document.getElementById('total-price');
+    const totalDiv = document.getElementById('total-cost');
+    totalValue.innerHTML = '<strong>Your cart is empty.</strong>';
+    totalDiv.innerHTML = '';
 }
 
-// Load cart data on page load
-window.onload = function () {
-    displayCartOnCheckout();
+// Handle form submission
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+    const form = document.getElementById('checkout-form');
+    const formData = new FormData(form);
+
+    // Create an order object from the form data
+    const order = {};
+    for (const [key, value] of formData.entries()) {
+        order[key] = value;
+    }
+
+    // Optionally include cart details in the order
+    order.cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    console.log('Order Submitted:', order);
+    alert('Thank you! Your order has been placed.');
+    clearCart(); // Clear the cart after order submission
+
 };
