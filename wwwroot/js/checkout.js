@@ -1,8 +1,7 @@
 ﻿// Display cart items and total price
 function displayCartOnCheckout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartContainer = document.getElementById('cart-container');
-    const totalValue = document.getElementById('total-value');
+    const totalValue = document.getElementById('total');
 
     // Clear previous cart items
     cartContainer.innerHTML = '';
@@ -15,14 +14,15 @@ function displayCartOnCheckout() {
 
     let total = 0;
     cart.forEach(item => {
-        const cartItem = `
-            <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-                <span>${item.title} (x${item.quantity})</span>
-                <span>$${(item.price * item.quantity).toFixed(2)}</span>
-            </div>
-        `;
+        //const cartItem = `
+        //    <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+        //        <span>${item.title} (x${item.quantity})</span>
+        //        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        //    </div>
+        //`;
         cartContainer.innerHTML += cartItem;
         total += item.price * item.quantity;
+        console.log(total,"total from cart")
     });
 
     totalValue.innerHTML = `<strong>Total Price (Before Taxes and Shipping): $${total.toFixed(2)}</strong>`;
