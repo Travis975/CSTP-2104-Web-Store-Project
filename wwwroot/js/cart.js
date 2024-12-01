@@ -85,7 +85,7 @@ function displayCart() {
                         <img src="${item.image}" alt="${item.title}" style="max-width: 100%; max-height: 100%; border: none; margin: 0;">
                     </div>
                     <div style="flex-grow: 1;">
-                        <h3>${item.title}</h3>
+                        <h3><a href="/product/${item.id}" style="text-decoration: none; color: inherit;">${item.title}</a></h3>
                         <div style="flex-grow: 1;">
                             <p><strong>Price: $${item.price.toFixed(2)}</strong></p>
                             <input type="number" value="${item.quantity}" min="1" style="width: 40px;" onchange="updateItemQuantity(${item.id}, this.value)" />

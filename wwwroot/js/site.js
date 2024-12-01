@@ -36,12 +36,12 @@ async function fetchProducts(query = '') {
                         <img src="${product.image}" alt="${product.title}" style="max-width: 100%; max-height: 100%; border: none; margin: 0;">
                     </div>
                     <hr>
-                    <h3>${title.slice(0, 6).join(" ").replace(",", "")} ${title.length > 6 ? "..." : ""}</h3>
-                    <p>Description: ${product.description.substring(0, 100)}... <a href="/product/${product.id}">Read More</a></p>
+                    <h3><a href="/product/${product.id}" style="text-decoration: none; color: inherit;">${title.slice(0, 6).join(" ").replace(",", "")} ${title.length > 6 ? "..." : ""}</a></h3>
+                    <p>Description: ${product.description.substring(0, 100)}... <a href="/product/${product.id}" style="text-decoration: none;">Read More</a></p>
                     <div style="border-radius: 0; box-shadow: none; margin-top: auto;">
                         <p><strong>Price: $${product.price.toFixed(2)}</strong></p>
                         <p>Rating: ${product.rating.rate} ⭐ (${product.rating.count} reviews)</p>
-                        <button onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)}, '${product.image}')" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">Add to Cart</button>
+                        <button class="btn-accept" onclick="addToCart(${product.id}, '${product.title}', ${product.price.toFixed(2)}, '${product.image}')">Add to Cart</button>
                     </div>
                 </div>
             `;
