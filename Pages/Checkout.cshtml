@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="/css/checkout.css">
 
 
-<form id="checkout-form" method="POST" onsubmit="handleSubmit(event)">
+<form id="checkout-form"
+    class="checkout-form"
+    method="POST"
+    onsubmit="handleSubmit(event)">
     <div>
         <h1>Checkout</h1>
         <br />
@@ -84,16 +87,20 @@
 
     <br />
 
-    <h2 id="total-price" style="margin-top: 20px;"></h2>
+    <div id="total-price"></div>
 
-    <button type="button" onclick="clearCart()" style="display: inline-block; background-color: red; color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">
-        Clear Cart
+    <button class="btn-deny" type="button" onclick="goToCart()">
+        Return
     </button>
-    <button type="submit" style="display: inline-block; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer;">
-        Place Order
+    <button class="btn-accept" type="submit">
+        Confirm
     </button>
 </form>
 
 <script src="js/checkout.js"></script>
 <script src="js/cart.js"></script>
-
+<script>
+    function goToCart() {
+        window.location.href = '/Cart';
+    }
+</script>

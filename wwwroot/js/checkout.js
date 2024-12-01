@@ -29,10 +29,10 @@ function displayCartTotal() {
     const finalTotal = total + shippingFee + taxes;
 
     totalValue.innerHTML = `
-        <strong>Subtotal:</strong> $${total.toFixed(2)}<br>
-        <strong>Shipping Fee:</strong> $${shippingFee.toFixed(2)}<br>
-        <strong>Taxes:</strong> $${taxes.toFixed(2)}<br>
-        <h2>Total Price: $${finalTotal.toFixed(2)}</h2>
+        <h3><strong>Subtotal:</strong> $${total.toFixed(2)}<br></h3>
+        <h3><strong>Shipping Fee:</strong> $${shippingFee.toFixed(2)}<br></h3>
+        <h3><strong>Taxes:</strong> $${taxes.toFixed(2)}<br></h3>
+        <h3><strong>Total Price:</strong> $${finalTotal.toFixed(2)}</h3>
     `;
 }
 

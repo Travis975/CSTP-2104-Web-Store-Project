@@ -1,5 +1,5 @@
-﻿ General Styling 
-body {
+﻿/* General Styling */
+form {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,13 +7,23 @@ body {
     color: #333;
 }
 
-h1, h2, h3 {
+form h1, form h2, form h3 {
     color: #007bff;
-    text-align: center;
     padding: 5px;
 }
 
-form {
+#total-price {
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    text-align: left !important;
+}
+
+#total-price p, #total-price h2 {
+    margin: 0;
+}
+
+form.checkout-form {
     max-width: 600px;
     margin: 20px auto;
     background: #fff;
@@ -22,13 +32,8 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea {
+form.checkout-form input,
+form.checkout-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -37,35 +42,18 @@ input, textarea {
     box-sizing: border-box;
 }
 
-textarea {
+form.checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form.checkout-form textarea {
     resize: none;
     height: 100px;
 }
 
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-    button[type="submit"] {
-        background-color: #007bff;
-        color: white;
-    }
-
-    button[type="button"] {
-        background-color: red;
-        color: white;
-    }
-
-    button:hover {
-        opacity: 0.9;
-    }
-
- Total Section 
+/* Total Section 
 #total-value, #total {
     text-align: center;
     margin: 20px 0;
@@ -82,3 +70,4 @@ button {
         margin-bottom: 10px;
     }
 }
+*/
